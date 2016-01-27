@@ -37,10 +37,11 @@ title: Social Media Buttons
       %xmp
         = partial 'shared/_share_btn_twitter', locals: { url: SHARE_URL }
 
+%h1
+  Why
+  %strong using
+  link href?
 
-
-
-%h1 Why using link href?
 %ul
   %li nice formatting
   %li no need of additional javascript files
@@ -49,6 +50,6 @@ title: Social Media Buttons
 
 %h1 Why not using link href?
 %ul
+  %li some troubles with empty spaces which has to be detected first (mail, google+,)
   %li window which opens is not that nice
-  %li link solution is hacky (not supported by provider) 
-  %li ( some troubles with empty spaces which has to be detected first (mail, google+,) (but also detected this on some provided share buttons) )
+  %li ( link solution is hacky (not supported by provider) ) 
