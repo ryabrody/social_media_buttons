@@ -2,8 +2,7 @@
 @import "normalize";
 
 body {
-  background: #ECC561;
-  text-align: center;
+  background: #E5E4E2;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
 }
@@ -64,4 +63,19 @@ h1 {
   to {
     -webkit-transform: scale(1);
   }
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  padding: 20px; 
+}
+
+table {
+  width: 100%;
+}
+xmp {
+  white-space: pre-wrap;
 }

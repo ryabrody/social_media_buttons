@@ -1,0 +1,54 @@
+---
+title: Social Media Buttons
+---
+- SHARE_URL = 'http://www.google.ch'
+
+%h1 Versions in comparison
+%table
+  %tr
+    %th
+      Link href
+    %th
+      Script form provider
+  %tr
+    %td
+      = share_on_google_plus_link(SHARE_URL)
+      %xmp
+        = share_on_google_plus_link(SHARE_URL)
+    %td
+      = partial 'shared/_share_btn_google_plus', locals: { url: SHARE_URL }
+      %xmp
+        = partial 'shared/_share_btn_google_plus', locals: { url: SHARE_URL }
+  %tr
+    %td
+      = share_on_facebook_link(SHARE_URL)
+      %xmp= share_on_facebook_link(SHARE_URL)
+    %td
+      = partial 'shared/_share_btn_facebook', locals: { url: SHARE_URL }
+      %xmp
+        = partial 'shared/_share_btn_facebook', locals: { url: SHARE_URL }
+  %tr
+    %td
+      = share_on_twitter_link(SHARE_URL)
+      %xmp
+        = share_on_twitter_link(SHARE_URL)
+    %td
+      = partial 'shared/_share_btn_twitter', locals: { url: SHARE_URL }
+      %xmp
+        = partial 'shared/_share_btn_twitter', locals: { url: SHARE_URL }
+
+
+
+
+%h1 Why using link href?
+%ul
+  %li nice formatting
+  %li no need of additional javascript files
+  %li same button for each language (cause no text inside button)
+  %li no load-jumping
+
+%h1 Why not using link href?
+%ul
+  %li some troubles with empty spaces which has to be detected first (mail, google+,)
+  %li window which opens is not that nice
+  %li link solution is hacky (not supported by provider) 
