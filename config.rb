@@ -37,7 +37,7 @@ helpers do
   end
 
   def share_on_facebook_link(share_url)
-    link_to 'Share on Facebook', share_on_facebook_url('http://www.google.ch')
+    link_to 'Share on Facebook', share_on_facebook_url(share_url)
   end
 
   def share_on_twitter_url(share_url)
