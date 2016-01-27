@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+      <meta charset='utf-8'>
+        <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
+          <!-- Use title if it's in the page YAML frontmatter -->
+          <title>Social Media Buttons</title>
+          <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+            <link href="/stylesheets/site.css" rel="stylesheet" />
+            <script src="/javascripts/all.js"></script>
+          </link>
+        </meta>
+      </meta>
+    </meta>
+  </head>
+  <body class='index'>
+    <h1>Versions in comparison</h1>
+    <table>
+      <tr>
+        <th>
+          Link href
+        </th>
+        <th>
+          Script form provider
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://plus.google.com/share?url=http://www.google.ch">Share on Google+</a>
+          <xmp>
+            <a href="https://plus.google.com/share?url=http://www.google.ch">Share on Google+</a>
+          </xmp>
+        </td>
+        <td>
+          <script async='' defer='' src='https://apis.google.com/js/platform.js'></script>
+          <div class='g-plus' data-action='share' data-annotation='none' data-href='http://www.google.ch'></div>
+          <xmp>
+            <script async='' defer='' src='https://apis.google.com/js/platform.js'></script>
+            <div class='g-plus' data-action='share' data-annotation='none' data-href='http://www.google.ch'></div>
+          </xmp>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.google.ch">Share on Facebook</a>
+          <xmp><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.google.ch">Share on Facebook</a></xmp>
+        </td>
+        <td>
+          <div id='fb-root'></div>
+          <script>
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.5";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          </script>
+          <div class='fb-share-button' data-href='http://www.google.ch' data-layout='button'></div>
+          <xmp>
+            <div id='fb-root'></div>
+            <script>
+              (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.5";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <div class='fb-share-button' data-href='http://www.google.ch' data-layout='button'></div>
+          </xmp>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://twitter.com/home?status=http://www.google.ch">Share on Twitter</a>
+          <xmp>
+            <a href="https://twitter.com/home?status=http://www.google.ch">Share on Twitter</a>
+          </xmp>
+        </td>
+        <td>
+          <a class='twitter-share-button' data-url='http://www.google.ch' href='https://twitter.com/share'>Tweet</a>
+          <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+          </script>
+          <xmp>
+            <a class='twitter-share-button' data-url='http://www.google.ch' href='https://twitter.com/share'>Tweet</a>
+            <script>
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+            </script>
+          </xmp>
+        </td>
+      </tr>
+    </table>
+    <h1>Why using link href?</h1>
+    <ul>
+      <li>nice formatting</li>
+      <li>no need of additional javascript files</li>
+      <li>same button for each language (cause no text inside button)</li>
+      <li>no load-jumping</li>
+    </ul>
+    <h1>Why not using link href?</h1>
+    <ul>
+      <li>some troubles with empty spaces which has to be detected first (mail, google+,)</li>
+      <li>window which opens is not that nice</li>
+      <li>link solution is hacky (not supported by provider)</li>
+    </ul>
+  </body>
+</html>
